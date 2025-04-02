@@ -18,7 +18,7 @@ const tipoRoutes = require("./routes/tipo.routes");
 const mediaRoutes = require("./routes/media.routes");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors());
