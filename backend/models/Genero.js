@@ -1,19 +1,19 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+require('dotenv').config();
+const { Sequelize } = require('sequelize');
 
-const Genero = sequelize.define(
-  "Genero",
-  {
-    id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-    nombre: { type: DataTypes.STRING, allowNull: false, unique: true },
-    estado: { type: DataTypes.ENUM("Activo", "Inactivo"), allowNull: false },
-    fecha_creacion: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
-    fecha_actualizacion: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
-    descripcion: { type: DataTypes.TEXT },
-  },
-  {
-    timestamps: false,
-  }
-);
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false, // Necesario en Render
+        },
+    },
+    logging: false, // Opcional para reducir logs
+});
 
-module.exports = Genero;
+sequelize.authenticate()
+    .then(() => console.log("✅ Conectado a PostgreSQL con Sequelize"))
+    .catch((err) => console.error("❌ Error de conexión con Sequelize:", err));
+
+module.exports = sequelize;
