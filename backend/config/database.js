@@ -13,19 +13,24 @@
 //     .then(() => console.log("📦 Base de datos sincronizada"))
 //     .catch(err => console.error("❌ Error al sincronizar la base de datos:", err));
 
+require("dotenv").config();
+const { Sequelize } = require("sequelize");
 
-require('dotenv').config();
-const { Pool } = require('pg');
-
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
+  dialectOptions: {
     ssl: {
-        rejectUnauthorized: false, // Necesario en Render
-    }
+      require: true,
+      rejectUnauthorized: false, // Necesario para Render
+    },
+  },
+  logging: false, // Para evitar logs innecesarios en producción
 });
 
-pool.connect()
-    .then(() => console.log('✅ Conectado a PostgreSQL'))
-    .catch(err => console.error('❌ Error de conexión:', err));
+// Probar conexión
+sequelize
+  .authenticate()
+  .then(() => console.log("✅ Conectado a PostgreSQL"))
+  .catch((err) => console.error("❌ Error de conexión:", err));
 
-module.exports = pool;
+module.exports = sequelize;
