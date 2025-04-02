@@ -1,0 +1,146 @@
+/* Fuente y Reset */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Fondo general */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 80px; /* Ajuste para que no tape el navbar */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjetas de contenido */
+.card {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #ffcc00;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: #ffdd44;
+}
+
+/* Tablas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.table th {
+    background: #222;
+}
+
+/* Inputs */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #222;
+    color: #fff;
+}
+
+/* Formularios */
+form {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Navegación Activa */
+.active {
+    color: #ffcc00 !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.btn-agregar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.3);
+}
+
+.btn-agregar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(255, 75, 43, 0.5);
+}
+
+.btn-agregar i {
+    font-size: 18px;
+}
+.btn-actualizarlist {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0px 4px 10px rgba(231, 111, 81, 0.3);
+}
+
+.btn-actualizarlist:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(231, 111, 81, 0.5);
+}
+
+.btn-actualizarlist i {
+    font-size: 16px;
+}

@@ -1,0 +1,108 @@
+/* ============================== */
+/* 🎨 ESTILO GLOBAL PARA UPDATE 🎨 */
+/* ============================== */
+
+/* Fuente y Reset */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Fondo general */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-top: 80px; /* Espacio para el navbar */
+}
+
+/* Contenedor principal */
+.update-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjeta del formulario */
+.update-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.update-card:hover {
+    transform: scale(1.02);
+}
+
+/* Título */
+.update-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Campos de entrada */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    background: #333;
+    border: 1px solid #ffcc00;
+}
+
+/* Botón de actualizar */
+.btn-actualizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0px 4px 10px rgba(231, 111, 81, 0.3);
+}
+
+.btn-actualizar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(231, 111, 81, 0.5);
+}
+
+/* Botón con ícono */
+.btn-actualizar i {
+    margin-right: 8px;
+    font-size: 18px;
+}

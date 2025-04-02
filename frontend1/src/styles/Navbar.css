@@ -1,0 +1,79 @@
+/* NAVBAR ESTILO RETRO COMPLETO */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que la barra ocupe toda la pantalla */
+  height: 80px;
+  background-color: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* TÍTULO Y LOGOS */
+.navbar-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px yellow;
+  white-space: nowrap; /* Evita que el texto se corte */
+}
+
+/* ICONOS */
+.navbar-title img {
+  width: 40px;
+  height: auto;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap; /* Evita que se acomoden en varias líneas */
+}
+
+/* ESTILO DE LOS BOTONES */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: #333;
+  padding: 12px 18px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  background: gold;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* EVITAR QUE EL CONTENIDO SE QUEDE DETRÁS DE LA NAVBAR */
+.main-content {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+/* 🔥 RESPONSIVE 🔥 */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap; /* Permite que los botones se acomoden bien */
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
