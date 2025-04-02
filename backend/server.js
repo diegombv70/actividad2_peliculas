@@ -86,6 +86,6 @@ sequelize
     .sync()
     .then(() => {
         console.log("📦 Base de datos sincronizada");
-        app.listen(PORT, () => console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`));
+        app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`));
     })
     .catch((error) => console.error("❌ Error al conectar la base de datos:", error));
