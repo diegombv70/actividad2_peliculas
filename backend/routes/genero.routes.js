@@ -6,6 +6,7 @@ const Genero = require("../models/Genero");
 router.get("/", async (req, res) => {
     try {
         const generos = await Genero.findAll();
+        console.log("Generos encontrados:", generos);
         res.json(generos);
     } catch (error) {
         res.status(500).json({ error: "Error al obtener géneros", detalle: error.message });

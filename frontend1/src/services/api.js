@@ -2,9 +2,8 @@ const API_URL = "http://localhost:3000";
 
 export const getDirectores = async () => {
     const response = await fetch(`${API_URL}/directores`);
-    const data = await response.json();  // ✅ Definir `data` antes de usarla
-    console.log("📌 Directores recibidos:", data);  // ✅ Ahora sí puedes ver los datos
-    return data;
+    const data = await response.json();  
+    console.log("📌 Directores recibidos:", data); 
 };
 
 

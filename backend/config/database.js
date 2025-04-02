@@ -10,8 +10,8 @@
 
 
 // sequelize.sync({ alter: true }) // O { force: true } si quieres recrear la BD
-//     .then(() => console.log("📦 Base de datos sincronizada"))
-//     .catch(err => console.error("❌ Error al sincronizar la base de datos:", err));
+//     .then(() => console.log("Base de datos sincronizada"))
+//     .catch(err => console.error("Error al sincronizar la base de datos:", err));
 
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
