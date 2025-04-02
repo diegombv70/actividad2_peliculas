@@ -89,6 +89,8 @@ sequelize
         app.get("/", (req, res) => {
             res.send("✅ Servidor funcionando en Render");
         });
+        console.log(`🔍 PORT asignado por Render: ${process.env.PORT}`);
+
         app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Servidor corriendo en puerto ${PORT}`));
     })
     .catch((error) => console.error("❌ Error al conectar la base de datos:", error));
