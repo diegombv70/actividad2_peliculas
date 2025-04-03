@@ -35,4 +35,6 @@ const DirectoresList = () => {
     );
 };
 
+
 export default DirectoresList;
+

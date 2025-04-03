@@ -1,11 +1,15 @@
 const API_URL = "http://localhost:8080";
 
+// export const getDirectores = async () => {
+//     const response = await fetch(`${API_URL}/directores`);
+//     const data = await response.json();  
+//     console.log("📌 Directores recibidos:", data); 
+// };
+
 export const getDirectores = async () => {
     const response = await fetch(`${API_URL}/directores`);
-    const data = await response.json();  
-    console.log("📌 Directores recibidos:", data); 
+    return response.json();
 };
-
 
 export const getPeliculas = async () => {
     const response = await fetch(`${API_URL}/medias`);
