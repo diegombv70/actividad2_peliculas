@@ -19,7 +19,8 @@ const tipoRoutes = require("./routes/tipo.routes");
 const mediaRoutes = require("./routes/media.routes");
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
+
 
 // Middleware
 const corsOptions = {
@@ -95,10 +96,10 @@ sequelize
     .then(() => {
         console.log("Base de datos sincronizada");
         app.get("/", (req, res) => {
-            res.send("Servidor funcionando en Render");
+            res.send("✅ Servidor funcionando en Render");
         });
         console.log(`PORT asignado por Render: ${process.env.PORT}`);
 
-        app.listen(PORT, '0.0.0.0', () => console.log(`Servidor corriendo en puerto ${PORT}`));
+        app.listen(PORT, () => console.log(`🚀 Servidor corriendo en puerto ${PORT}`));
     })
     .catch((error) => console.error("Error al conectar la base de datos:", error));
