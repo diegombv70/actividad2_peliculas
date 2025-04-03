@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  root: '.',  // Asegura que Vite tome la raíz correcta
+  base: './',
+  server: {
+    historyApiFallback: true, // Para que Render maneje rutas correctamente
+  },
 });
