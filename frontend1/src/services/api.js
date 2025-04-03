@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080";
+const API_URL = "https://actividad2-peliculas.onrender.com";
 
 // export const getDirectores = async () => {
 //     const response = await fetch(`${API_URL}/directores`);
