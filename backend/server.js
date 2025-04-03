@@ -32,7 +32,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use("/uploads", express.static(path.join(__dirname, "public/uploads"))); // Servir imágenes
+app.use("/uploads", express.static(path.join(__dirname, "public/uploads"))); 
 
 // Usar las rutas
 app.use("/generos", generoRoutes);
