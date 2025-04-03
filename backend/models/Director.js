@@ -12,7 +12,7 @@ const Director = sequelize.define(
   },
   { 
     timestamps: false,
-    tableName: "Directors", // 👈 Especificamos el nombre correcto de la tabla en la DB
+    tableName: "directors", // 👈 Especificamos el nombre correcto de la tabla en la DB
   }
 );
 

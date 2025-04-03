@@ -12,7 +12,9 @@ const Productora = sequelize.define(
     slogan: { type: DataTypes.STRING, allowNull: true, defaultValue: "" },
     descripcion: { type: DataTypes.TEXT, allowNull: true, defaultValue: "" },
   },
-  { timestamps: false }
+  { timestamps: false,
+    tableName: "productoras"
+   }
 );
 
 module.exports = Productora;

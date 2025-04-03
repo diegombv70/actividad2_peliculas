@@ -22,7 +22,9 @@ const Media = sequelize.define(
     productora_id: { type: DataTypes.INTEGER, allowNull: false, references: { model: Productora, key: "id" } },
     tipo_id: { type: DataTypes.INTEGER, allowNull: false, references: { model: Tipo, key: "id" } },
   },
-  { timestamps: false }
+  { timestamps: false,
+    tableName: "media"
+  }
 );
 
 // Definir relaciones (opcional)

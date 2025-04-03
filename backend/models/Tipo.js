@@ -10,7 +10,9 @@ const Tipo = sequelize.define(
     fecha_actualizacion: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
     descripcion: { type: DataTypes.TEXT },
   },
-  { timestamps: false }
+  { timestamps: false,
+    tableName: "tipos"
+   }
 );
 
 module.exports = Tipo;

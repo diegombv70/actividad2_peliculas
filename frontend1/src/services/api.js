@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "http://localhost:8080";
 
 export const getDirectores = async () => {
     const response = await fetch(`${API_URL}/directores`);
