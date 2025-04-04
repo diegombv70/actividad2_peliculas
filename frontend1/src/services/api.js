@@ -1,15 +1,12 @@
 const API_URL = "https://actividad2-peliculas.onrender.com";
 
-// export const getDirectores = async () => {
-//     const response = await fetch(`${API_URL}/directores`);
-//     const data = await response.json();  
-//     console.log("📌 Directores recibidos:", data); 
-// };
-
 export const getDirectores = async () => {
     const response = await fetch(`${API_URL}/directores`);
-    return response.json();
+    const data = await response.json();  // ✅ Definir `data` antes de usarla
+    console.log("📌 Directores recibidos:", data);  // ✅ Ahora sí puedes ver los datos
+    return data;
 };
+
 
 export const getPeliculas = async () => {
     const response = await fetch(`${API_URL}/medias`);
